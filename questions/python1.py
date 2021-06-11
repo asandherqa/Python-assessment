@@ -63,12 +63,12 @@ def one(input1, input2):
 	# No hints for this question
 
 def two(arg1):
-    if n % 3 == 0 and n % 5 == 0:
-        return 'FizzBuzz'
-    elif n % 3 == 0:
-        return 'Fizz'
-    elif n % 5 == 0:
-        return 'Buzz'
+    if arg1 % 3 == 0 and arg1 % 5 == 0:
+        return 'fizzBuzz'
+    elif arg1 % 3 == 0:
+        return 'fizz'
+    elif arg1 % 5 == 0:
+        return 'buzz'
     else:
         return "null"
 
