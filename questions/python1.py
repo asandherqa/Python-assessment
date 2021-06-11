@@ -113,7 +113,17 @@ def three(input):
 
 
 def four(input):
-    return False
+    if "cie" in input:
+        return False
+    elif "cei" in input:
+        return True
+    elif "ei" in input:
+        return False
+    elif "ie" in input:
+        return True
+    else:
+        return True
+
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
