@@ -168,7 +168,13 @@ def five(input):
 	# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
  
 def six(string, int, char):
-	return False
+	if len(string) < int:
+		return False
+	else:
+		if char == string.lowercase[int-1]:
+			return True
+		else:
+			return False
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -191,6 +197,9 @@ def six(string, int, char):
 	# Take a look at the documentation for Strings, List and range.
 
 def seven(inputString, char):
+	string = inputString.replace(' ','')
+	if char in string:
+		return string.index(char)+1
 	return -1
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
@@ -218,7 +227,8 @@ def seven(inputString, char):
 	# help(int) for working with numbers and help(str) for working with Strings.
 
 def eight(arg1):
-	return 0
+	nums = [sum([int(digit) for digit in number]) for number in arg1.rsplit(sep=" ")]
+	return max(nums)
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
@@ -245,7 +255,12 @@ def eight(arg1):
 	# Use your CLI to access the Python documentation and get help manipulating strings - help(str).
 
 def nine(input):
-	return ""
+    input = input.lower()
+    result = re.search("bert(.*)bert",input)
+    if result:
+        return result.group(1)
+    else:
+        return ""
 
 #------------------------------------------------------------------------------------------------------------------------------------------------------------------ 
 
